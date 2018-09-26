@@ -135,7 +135,13 @@ namespace ACLTest_Console
             return dc.Calculate(from.Latitude, from.Longitude,
                 to.Latitude, to.Longitude, type, true);
         }
-
+        /// <summary>
+        /// Create a new Trip
+        /// </summary>
+        /// <param name="origin">Origination Airport Icao</param>
+        /// <param name="destination">Destination Airport Icao</param>
+        /// <param name="expectedMileage">Dundas Comparison Mileage</param>
+        /// <param name="expectedNMileage">Dundas Comparison Nautical Mileage</param>
         private static void AddTrip(string origin, string destination, decimal expectedMileage, decimal expectedNMileage)
         {
             _Trips.Add(
